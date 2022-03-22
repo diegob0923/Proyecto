@@ -5,25 +5,27 @@ using System.Web;
 
 namespace Proyecto.Clases
 {
-    public class EspecialidadesMedicas
+    public class TratamientosPaciente
     {
         #region atributos
-        public string nombre { get; set; }
-        public string descripcion { get; set; }
+        public int idCliente { get; set; }
+        public int idTratamiento { get; set; }
+
 
         #endregion atributos
 
         #region constructores
-        public EspecialidadesMedicas(string nombre, string descripcion)
+        public TratamientosPaciente(int idCliente, int idTratamiento)
         {
-            this.nombre = nombre;
-            this.descripcion = descripcion;
+            this.idCliente = idCliente;
+            this.idTratamiento = idTratamiento;
+
         }
 
-        public EspecialidadesMedicas()
+        public TratamientosPaciente()
         {
-            this.nombre = "";
-            this.descripcion = "";
+            idCliente = 0;
+            idTratamiento = 0;
         }
         # endregion constructores
 

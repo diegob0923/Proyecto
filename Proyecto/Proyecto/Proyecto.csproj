@@ -172,9 +172,9 @@
     <Compile Include="Clases\CitasMedicas.cs" />
     <Compile Include="Clases\Clientes.cs" />
     <Compile Include="Clases\Doctores.cs" />
-    <Compile Include="Clases\Enfermedades.cs" />
+    <Compile Include="Clases\EnfermedadPaciente.cs" />
     <Compile Include="Clases\EspecialidadesMedicas.cs" />
-    <Compile Include="Clases\TratamientosQuirurgicos.cs" />
+    <Compile Include="Clases\TratamientosPaciente.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
