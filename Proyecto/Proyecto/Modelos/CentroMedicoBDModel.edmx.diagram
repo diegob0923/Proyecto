@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="36d88547a5ac45b98a309b7adf97e259" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Canton" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Cliente" Width="1.5" PointX="7.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Distrito" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Doctores" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Enfermedad" Width="1.5" PointX="10.5" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Enfermedad_Cliente" Width="1.5" PointX="12.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Especialidad_Medica" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Provincia" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Registro_citas" Width="1.5" PointX="15.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Tratamiento_Cliente" Width="1.5" PointX="12.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Tratamiento_Quirurgico" Width="1.5" PointX="10.5" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="Model.Canton_ref_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.Distrito_ref_Canton" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Cliente_Canton" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Doctores_Canton" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Cliente_Distrito" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Cliente_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Enfermedad_Cliente_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Registro_citas_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Tratamiento_Cliente_Cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Doctores_Distrito" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Doctores_Especialidad_Medica" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Doctores_Provincia" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Registro_citas_Doctores" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Enfermedad_Cliente_Enfermedad" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Registro_citas_Especialidad_Medica" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Tratamiento_Cliente_Tratamiento_Quirurgico" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
