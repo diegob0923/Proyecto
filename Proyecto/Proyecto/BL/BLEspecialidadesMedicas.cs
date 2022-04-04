@@ -11,18 +11,17 @@ namespace Proyecto.BL
 
         public bool insertarEspecialidadMedica(string nombre, string descripcion)
         {
-            int registrosAfectados = 0;
-
-            registrosAfectados = modeloBD.sp_InsertarEspecialidadMedica(nombre, descripcion);
-
-            if (registrosAfectados > 0)
+            try
             {
-                return true;
+                modeloBD.sp_InsertarEspecialidadMedica(nombre, descripcion);
             }
-            else
+            catch (Exception exception)
             {
                 return false;
             }
+            
+            return true;
+            
         }
     }
 }
