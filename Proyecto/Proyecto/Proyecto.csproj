@@ -121,6 +121,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Formularios\frmClienteInsertar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -209,6 +210,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmClienteInsertar.aspx.cs">
+      <DependentUpon>frmClienteInsertar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmClienteInsertar.aspx.designer.cs">
+      <DependentUpon>frmClienteInsertar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -265,6 +273,9 @@
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\RetornaCantones_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\RetornaDistritos_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\RetornaProvincias_Result.cs">
