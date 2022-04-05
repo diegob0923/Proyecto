@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Proyecto.Modelos;
+using Proyecto.BL;
+
 namespace Proyecto.Formularios
 {
     public partial class frmClienteInsertar : System.Web.UI.Page
@@ -20,13 +22,18 @@ namespace Proyecto.Formularios
             }
         }
 
+        void seleccionPorDefectoDropDownList(DropDownList dropDownList)
+        {
+            dropDownList.Items.Insert(0, new ListItem("Seleccione una opción", ""));
+            dropDownList.SelectedValue = "";
+        }
+
         void cargaProvincias()
         { 
             List<RetornaProvincias_Result> listaProvincias = modeloBD.RetornaProvincias(null).ToList();
             ddlProvincia.DataSource = listaProvincias;
             ddlProvincia.DataBind();
-            ddlProvincia.Items.Insert(0, new ListItem("Seleccione una opción", ""));
-            ddlProvincia.SelectedValue = "";
+            seleccionPorDefectoDropDownList(ddlProvincia);
         }
 
         protected void ddlProvincia_SelectedIndexChanged(object sender, EventArgs e)
@@ -40,8 +47,7 @@ namespace Proyecto.Formularios
             List<RetornaCantones_Result> listaCantones = modeloBD.RetornaCantones(null, id_Provincia).ToList();
             ddlCanton.DataSource = listaCantones;
             ddlCanton.DataBind();
-            ddlCanton.Items.Insert(0, new ListItem("Seleccione una opción", ""));
-            ddlCanton.SelectedValue = "";
+            seleccionPorDefectoDropDownList(ddlCanton);
         }
 
         protected void ddlCanton_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,13 +61,34 @@ namespace Proyecto.Formularios
             List<RetornaDistritos_Result> listaDistritos = modeloBD.RetornaDistritos(null, id_Canton).ToList();
             ddlDistrito.DataSource = listaDistritos;
             ddlDistrito.DataBind();
-            ddlDistrito.Items.Insert(0, new ListItem("Seleccione una opción", ""));
-            ddlDistrito.SelectedValue = "";
+            seleccionPorDefectoDropDownList(ddlDistrito);
         }
 
         protected void ddlDistrito_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnInsertar_Click(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                BLCliente oBLCliente = new BLCliente();
+
+                try
+                {
+                    oBLCliente.InsertarClientes(Convert.ToInt32(txtCedula.Text),txtGenero.Text,txtFechaNacimiento.Text,txtNombre.Text,
+                                                txtPrimerApellido.Text,txtSegundoApellido.Text,txtTelefono1.Text, txtTelefono2.Text,txtCorreo.Text,
+                                                Convert.ToInt16(ddlProvincia.SelectedValue), Convert.ToInt16(ddlCanton.SelectedValue),
+                                                Convert.ToInt16(ddlDistrito.SelectedValue),txtDireccion.Text);
+                    lblMensaje.Text = "Registro insertado correctamente";
+                }
+                catch (Exception excepcion)
+                {
+                    lblMensaje.Text = "Ocurrió un error al insertar";
+                }
+                
+            }
         }
     }
 }

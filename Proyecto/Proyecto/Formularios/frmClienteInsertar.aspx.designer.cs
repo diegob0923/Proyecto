@@ -42,6 +42,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtCedula;
 
         /// <summary>
+        /// rfvCedula control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCedula;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGenero;
+
+        /// <summary>
+        /// rfvGenero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvGenero;
 
         /// <summary>
         /// Label3 control.
@@ -78,6 +96,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtFechaNacimiento;
 
         /// <summary>
+        /// rfvFechaNacimiento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFechaNacimiento;
+
+        /// <summary>
         /// Label4 control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
+
+        /// <summary>
+        /// rfvNombre control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNombre;
 
         /// <summary>
         /// Label5 control.
@@ -114,6 +150,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtPrimerApellido;
 
         /// <summary>
+        /// rfvPrimerApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPrimerApellido;
+
+        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
@@ -130,6 +175,15 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSegundoApellido;
+
+        /// <summary>
+        /// rfvSegundoApellido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSegundoApellido;
 
         /// <summary>
         /// Label7 control.
@@ -150,6 +204,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtTelefono1;
 
         /// <summary>
+        /// rfvTelefono1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTelefono1;
+
+        /// <summary>
         /// Label8 control.
         /// </summary>
         /// <remarks>
@@ -166,6 +229,15 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTelefono2;
+
+        /// <summary>
+        /// rfvTelefono2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTelefono2;
 
         /// <summary>
         /// Label9 control.
@@ -186,6 +258,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtCorreo;
 
         /// <summary>
+        /// rfvCorreo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCorreo;
+
+        /// <summary>
         /// Label10 control.
         /// </summary>
         /// <remarks>
@@ -202,6 +283,15 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlProvincia;
+
+        /// <summary>
+        /// rfvProvincia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProvincia;
 
         /// <summary>
         /// Label11 control.
@@ -222,6 +312,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.DropDownList ddlCanton;
 
         /// <summary>
+        /// rfvCanton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCanton;
+
+        /// <summary>
         /// Label12 control.
         /// </summary>
         /// <remarks>
@@ -238,6 +337,15 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlDistrito;
+
+        /// <summary>
+        /// rfvDistrito control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDistrito;
 
         /// <summary>
         /// Label13 control.
@@ -258,6 +366,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtDireccion;
 
         /// <summary>
+        /// rfvDireccion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDireccion;
+
+        /// <summary>
         /// btnInsertar control.
         /// </summary>
         /// <remarks>
@@ -265,5 +382,14 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnInsertar;
+
+        /// <summary>
+        /// lblMensaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
     }
 }

@@ -29,15 +29,13 @@ namespace Proyecto.Formularios
                 try
                 {
                     oEspecialidadesMedicas.insertarEspecialidadMedica(txtNombre.Text, txtDescripcion.Text);
+                    lblMensaje.Text = "Registro insertado correctamente";
                 }
                 catch (Exception excepcion)
                 {
                     lblMensaje.Text = "Ocurrió un error al insertar";
                 }
-                finally
-                {
-                    lblMensaje.Text = "Registro insertado correctamente";
-                }
+               
             }
         }
     }
