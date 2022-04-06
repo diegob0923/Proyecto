@@ -122,7 +122,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Formularios\frmClienteInsertar.aspx" />
+    <Content Include="Formularios\frmDoctoresInsertar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
+    <Content Include="Formularios\frmRegistroCitas.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -197,7 +199,9 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BL\BLCliente.cs" />
+    <Compile Include="BL\BlDoctores.cs" />
     <Compile Include="BL\BLEspecialidadesMedicas.cs" />
+    <Compile Include="BL\BLRegistroCitas.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,12 +223,26 @@
     <Compile Include="Formularios\frmClienteInsertar.aspx.designer.cs">
       <DependentUpon>frmClienteInsertar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmDoctoresInsertar.aspx.cs">
+      <DependentUpon>frmDoctoresInsertar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmDoctoresInsertar.aspx.designer.cs">
+      <DependentUpon>frmDoctoresInsertar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.designer.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmRegistroCitas.aspx.cs">
+      <DependentUpon>frmRegistroCitas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmRegistroCitas.aspx.designer.cs">
+      <DependentUpon>frmRegistroCitas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
