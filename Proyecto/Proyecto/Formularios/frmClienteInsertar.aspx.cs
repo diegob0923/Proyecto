@@ -81,6 +81,7 @@ namespace Proyecto.Formularios
                                                 txtPrimerApellido.Text,txtSegundoApellido.Text,txtTelefono1.Text, txtTelefono2.Text,txtCorreo.Text,
                                                 Convert.ToInt16(ddlProvincia.SelectedValue), Convert.ToInt16(ddlCanton.SelectedValue),
                                                 Convert.ToInt16(ddlDistrito.SelectedValue),txtDireccion.Text);
+
                     lblMensaje.Text = "Registro insertado correctamente";
                 }
                 catch (Exception excepcion)
