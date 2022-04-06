@@ -140,7 +140,7 @@
     <Content Include="Modelos\CentroMedicoBDModel.edmx.diagram">
       <DependentUpon>CentroMedicoBDModel.edmx</DependentUpon>
     </Content>
-    <Content Include="MasterPage\MasterPage.Master" />
+    <Content Include="PaginaMaestra\PaginaMaestra.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Modelos\CentroMedicoBDModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -229,12 +229,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="MasterPage\MasterPage.Master.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
-    </Compile>
-    <Compile Include="MasterPage\MasterPage.Master.designer.cs">
-      <DependentUpon>MasterPage.Master</DependentUpon>
-    </Compile>
     <Compile Include="Modelos\Canton.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
@@ -318,6 +312,13 @@
     </Compile>
     <Compile Include="Modelos\Tratamiento_Quirurgico.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\PaginaMaestra.Master.cs">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\PaginaMaestra.Master.designer.cs">
+      <DependentUpon>PaginaMaestra.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
