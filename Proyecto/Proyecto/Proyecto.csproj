@@ -136,9 +136,11 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CentroMedicoBDModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <Content Include="Imagenes\Captura.PNG" />
     <Content Include="Modelos\CentroMedicoBDModel.edmx.diagram">
       <DependentUpon>CentroMedicoBDModel.edmx</DependentUpon>
     </Content>
+    <Content Include="MasterPage\MasterPage.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Modelos\CentroMedicoBDModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -226,6 +228,12 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Canton.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
