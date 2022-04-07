@@ -41,6 +41,10 @@
             height: 100px; 
         } 
  
+        .footer{
+            position: absolute;
+            bottom:5px;
+        }
   
     </style> 
     <asp:ContentPlaceHolder ID="head" runat="server"> 
@@ -72,13 +76,12 @@
  
     <div class="right"> 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 
-            <p> 
-                <br /> 
+            
             
         </asp:ContentPlaceHolder> 
     </div> 
     </form> 
  
-    <footer >Todos los derechos Reservados <%: DateTime.Now.Year %></footer> 
+    <footer class="footer">Todos los derechos Reservados <%: DateTime.Now.Year %></footer> 
 </body> 
 </html> 

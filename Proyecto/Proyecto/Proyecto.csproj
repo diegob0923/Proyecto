@@ -123,6 +123,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Formularios\frmClienteInsertar.aspx" />
     <Content Include="Formularios\frmDoctoresInsertar.aspx" />
+    <Content Include="Formularios\frmClienteLista.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
     <Content Include="Formularios\frmRegistroCitas.aspx" />
     <Content Include="Global.asax" />
@@ -229,6 +230,13 @@
     </Compile>
     <Compile Include="Formularios\frmDoctoresInsertar.aspx.designer.cs">
       <DependentUpon>frmDoctoresInsertar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmClienteLista.aspx.cs">
+      <DependentUpon>frmClienteLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmClienteLista.aspx.designer.cs">
+      <DependentUpon>frmClienteLista.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
