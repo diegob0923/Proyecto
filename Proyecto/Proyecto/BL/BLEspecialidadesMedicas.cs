@@ -23,5 +23,17 @@ namespace Proyecto.BL
             return true;
             
         }
+
+        public List<sp_ConsultarEspecialidadPorNombre_Result> ConsultarEspecialidadMedica(string nombre = null)
+        {
+            List<sp_ConsultarEspecialidadPorNombre_Result> registros = new List<sp_ConsultarEspecialidadPorNombre_Result>();
+
+            registros = modeloBD.sp_ConsultarEspecialidadPorNombre(nombre).ToList();
+
+            return registros;
+
+        }
+
+
     }
 }

@@ -54,7 +54,6 @@
             <asp:Label ID="Label8" runat="server" Text="Telefono2"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtTelefono2" runat="server" MaxLength="50"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="rfvTelefono2" runat="server" ControlToValidate="txtTelefono2" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
             <br />
             <asp:Label ID="Label9" runat="server" Text="Correo"></asp:Label>

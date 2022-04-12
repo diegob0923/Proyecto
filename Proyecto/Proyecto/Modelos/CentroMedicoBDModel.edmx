@@ -372,8 +372,7 @@
         <Function Name="sp_ConsultarDoctoresPorCedula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
         </Function>
-        <Function Name="sp_ConsultarEspecialidadPorIdONombre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="id_especialidad" Type="int" Mode="In" />
+        <Function Name="sp_ConsultarEspecialidadPorNombre" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="nombre" Type="varchar" Mode="In" />
         </Function>
         <Function Name="sp_ConsultarRegistroCitas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1062,15 +1061,8 @@
           <FunctionImport Name="sp_citas_paciente_asistio" ReturnType="Collection(Model.sp_citas_paciente_asistio_Result)">
           <Parameter Name="cedula" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="sp_ConsultarClientePorCedula" ReturnType="Collection(Model.sp_ConsultarClientePorCedula_Result)">
-          <Parameter Name="cedula" Mode="In" Type="Int32" />
-          </FunctionImport>
           <FunctionImport Name="sp_ConsultarDoctoresPorCedula" ReturnType="Collection(Model.sp_ConsultarDoctoresPorCedula_Result)">
           <Parameter Name="cedula" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="sp_ConsultarEspecialidadPorIdONombre" ReturnType="Collection(Model.sp_ConsultarEspecialidadPorIdONombre_Result)">
-            <Parameter Name="id_especialidad" Mode="In" Type="Int32" />
-            <Parameter Name="nombre" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_ConsultarRegistroCitas" ReturnType="Collection(Model.sp_ConsultarRegistroCitas_Result)">
           <Parameter Name="id_único" Mode="In" Type="Int32" />
@@ -1216,6 +1208,12 @@
             <Parameter Name="nombre" Mode="In" Type="String" />
             <Parameter Name="id_Canton" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="sp_ConsultarEspecialidadPorNombre" ReturnType="Collection(Model.sp_ConsultarEspecialidadPorNombre_Result)">
+          <Parameter Name="nombre" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ConsultarClientePorCedula" ReturnType="Collection(Model.sp_ConsultarClientePorCedula_Result)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="RetornaCantones_Result">
           <Property Type="Int32" Name="id_Canton" Nullable="false" />
@@ -1255,22 +1253,6 @@
           <Property Type="DateTime" Name="fecha_cita" Nullable="false" />
           <Property Type="String" Name="estado_cita" Nullable="false" MaxLength="50" />
         </ComplexType>
-        <ComplexType Name="sp_ConsultarClientePorCedula_Result">
-          <Property Type="Int32" Name="id_cliente" Nullable="false" />
-          <Property Type="Int32" Name="cedula" Nullable="false" />
-          <Property Type="String" Name="genero" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="fecha_nacimiento" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="primer_apellido" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="segundo_apellido" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="telefono1" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="telefono2" Nullable="true" MaxLength="50" />
-          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
-          <Property Type="Int32" Name="id_provincia" Nullable="false" />
-          <Property Type="Int32" Name="id_canton" Nullable="false" />
-          <Property Type="Int32" Name="id_distrito" Nullable="false" />
-          <Property Type="String" Name="direccion" Nullable="false" MaxLength="100" />
-        </ComplexType>
         <ComplexType Name="sp_ConsultarDoctoresPorCedula_Result">
           <Property Type="Int32" Name="id_Doctor" Nullable="false" />
           <Property Type="Int32" Name="cedula" Nullable="false" />
@@ -1289,11 +1271,6 @@
           <Property Type="String" Name="direccion" Nullable="false" MaxLength="50" />
           <Property Type="Int32" Name="especialidad_medica" Nullable="false" />
           <Property Type="Int32" Name="hora_almuerzo" Nullable="false" />
-        </ComplexType>
-        <ComplexType Name="sp_ConsultarEspecialidadPorIdONombre_Result">
-          <Property Type="Int32" Name="id_especialidad" Nullable="false" />
-          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
-          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
         </ComplexType>
         <ComplexType Name="sp_ConsultarRegistroCitas_Result">
           <Property Type="Int32" Name="id_único" Nullable="false" />
@@ -1331,6 +1308,27 @@
           <Property Type="DateTime" Name="fechaModifica" Nullable="true" Precision="23" />
           <Property Type="String" Name="vc_Estado" Nullable="true" MaxLength="3" />
           <Property Type="Int32" Name="id_DistritoInec" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_ConsultarEspecialidadPorNombre_Result">
+          <Property Type="Int32" Name="id_especialidad" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_ConsultarClientePorCedula_Result">
+          <Property Type="Int32" Name="id_cliente" Nullable="false" />
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+          <Property Type="String" Name="genero" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="fecha_nacimiento" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="primer_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="segundo_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="telefono1" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="telefono2" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="correo" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="provincia" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="canton" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="distrito" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="direccion" Nullable="false" MaxLength="100" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1542,26 +1540,6 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_ConsultarClientePorCedula" FunctionName="Model.Store.sp_ConsultarClientePorCedula">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="Model.sp_ConsultarClientePorCedula_Result">
-                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
-                <ScalarProperty Name="cedula" ColumnName="cedula" />
-                <ScalarProperty Name="genero" ColumnName="genero" />
-                <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
-                <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
-                <ScalarProperty Name="telefono1" ColumnName="telefono1" />
-                <ScalarProperty Name="telefono2" ColumnName="telefono2" />
-                <ScalarProperty Name="correo" ColumnName="correo" />
-                <ScalarProperty Name="id_provincia" ColumnName="id_provincia" />
-                <ScalarProperty Name="id_canton" ColumnName="id_canton" />
-                <ScalarProperty Name="id_distrito" ColumnName="id_distrito" />
-                <ScalarProperty Name="direccion" ColumnName="direccion" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_ConsultarDoctoresPorCedula" FunctionName="Model.Store.sp_ConsultarDoctoresPorCedula">
             <ResultMapping>
               <ComplexTypeMapping TypeName="Model.sp_ConsultarDoctoresPorCedula_Result">
@@ -1582,15 +1560,6 @@
                 <ScalarProperty Name="direccion" ColumnName="direccion" />
                 <ScalarProperty Name="especialidad_medica" ColumnName="especialidad_medica" />
                 <ScalarProperty Name="hora_almuerzo" ColumnName="hora_almuerzo" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
-          <FunctionImportMapping FunctionImportName="sp_ConsultarEspecialidadPorIdONombre" FunctionName="Model.Store.sp_ConsultarEspecialidadPorIdONombre">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="Model.sp_ConsultarEspecialidadPorIdONombre_Result">
-                <ScalarProperty Name="id_especialidad" ColumnName="id_especialidad" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
@@ -1663,6 +1632,35 @@
                 <ScalarProperty Name="fechaModifica" ColumnName="fechaModifica" />
                 <ScalarProperty Name="vc_Estado" ColumnName="vc_Estado" />
                 <ScalarProperty Name="id_DistritoInec" ColumnName="id_DistritoInec" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ConsultarEspecialidadPorNombre" FunctionName="Model.Store.sp_ConsultarEspecialidadPorNombre">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_ConsultarEspecialidadPorNombre_Result">
+                <ScalarProperty Name="id_especialidad" ColumnName="id_especialidad" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ConsultarClientePorCedula" FunctionName="Model.Store.sp_ConsultarClientePorCedula">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_ConsultarClientePorCedula_Result">
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+                <ScalarProperty Name="fecha_nacimiento" ColumnName="fecha_nacimiento" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
+                <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
+                <ScalarProperty Name="telefono1" ColumnName="telefono1" />
+                <ScalarProperty Name="telefono2" ColumnName="telefono2" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="provincia" ColumnName="provincia" />
+                <ScalarProperty Name="canton" ColumnName="canton" />
+                <ScalarProperty Name="distrito" ColumnName="distrito" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>

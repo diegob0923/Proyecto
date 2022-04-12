@@ -24,5 +24,25 @@ namespace Proyecto.BL
                 return true;
             
         }
+
+        public List<sp_ConsultarClientePorCedula_Result> RetornarClientes(string cedula=null)
+        { 
+            List<sp_ConsultarClientePorCedula_Result> resultado = new List<sp_ConsultarClientePorCedula_Result>();
+
+            if (cedula.Equals(""))
+            {
+                resultado = modeloBD.sp_ConsultarClientePorCedula(null).ToList();//traer todos los registros
+            }
+            else
+            {
+                resultado = modeloBD.sp_ConsultarClientePorCedula(Convert.ToInt32(cedula)).ToList();
+            }
+            
+               
+
+
+            return resultado;
+        }
+
     }
 }

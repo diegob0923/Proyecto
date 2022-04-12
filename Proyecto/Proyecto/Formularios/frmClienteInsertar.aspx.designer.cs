@@ -231,16 +231,7 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtTelefono2;
 
         /// <summary>
-        /// Control rfvTelefono2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTelefono2;
-
-        /// <summary>
-        /// Control Label9.
+        /// Label9 control.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
