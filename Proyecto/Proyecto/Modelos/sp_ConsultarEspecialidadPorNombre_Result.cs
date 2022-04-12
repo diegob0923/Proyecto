@@ -11,7 +11,7 @@ namespace Proyecto.Modelos
 {
     using System;
     
-    public partial class sp_ConsultarEspecialidadPorIdONombre_Result
+    public partial class sp_ConsultarEspecialidadPorNombre_Result
     {
         public int id_especialidad { get; set; }
         public string nombre { get; set; }

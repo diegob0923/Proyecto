@@ -137,15 +137,6 @@ namespace Proyecto.Modelos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_citas_paciente_asistio_Result>("sp_citas_paciente_asistio", cedulaParameter);
         }
     
-        public virtual ObjectResult<sp_ConsultarClientePorCedula_Result> sp_ConsultarClientePorCedula(Nullable<int> cedula)
-        {
-            var cedulaParameter = cedula.HasValue ?
-                new ObjectParameter("cedula", cedula) :
-                new ObjectParameter("cedula", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarClientePorCedula_Result>("sp_ConsultarClientePorCedula", cedulaParameter);
-        }
-    
         public virtual ObjectResult<sp_ConsultarDoctoresPorCedula_Result> sp_ConsultarDoctoresPorCedula(Nullable<int> cedula)
         {
             var cedulaParameter = cedula.HasValue ?
@@ -153,19 +144,6 @@ namespace Proyecto.Modelos
                 new ObjectParameter("cedula", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarDoctoresPorCedula_Result>("sp_ConsultarDoctoresPorCedula", cedulaParameter);
-        }
-    
-        public virtual ObjectResult<sp_ConsultarEspecialidadPorIdONombre_Result> sp_ConsultarEspecialidadPorIdONombre(Nullable<int> id_especialidad, string nombre)
-        {
-            var id_especialidadParameter = id_especialidad.HasValue ?
-                new ObjectParameter("id_especialidad", id_especialidad) :
-                new ObjectParameter("id_especialidad", typeof(int));
-    
-            var nombreParameter = nombre != null ?
-                new ObjectParameter("nombre", nombre) :
-                new ObjectParameter("nombre", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarEspecialidadPorIdONombre_Result>("sp_ConsultarEspecialidadPorIdONombre", id_especialidadParameter, nombreParameter);
         }
     
         public virtual ObjectResult<sp_ConsultarRegistroCitas_Result> sp_ConsultarRegistroCitas(Nullable<int> id_único)
@@ -686,6 +664,24 @@ namespace Proyecto.Modelos
                 new ObjectParameter("id_Canton", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<RetornaDistritos_Result>("RetornaDistritos", nombreParameter, id_CantonParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarEspecialidadPorNombre_Result> sp_ConsultarEspecialidadPorNombre(string nombre)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarEspecialidadPorNombre_Result>("sp_ConsultarEspecialidadPorNombre", nombreParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarClientePorCedula_Result> sp_ConsultarClientePorCedula(Nullable<int> cedula)
+        {
+            var cedulaParameter = cedula.HasValue ?
+                new ObjectParameter("cedula", cedula) :
+                new ObjectParameter("cedula", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarClientePorCedula_Result>("sp_ConsultarClientePorCedula", cedulaParameter);
         }
     }
 }

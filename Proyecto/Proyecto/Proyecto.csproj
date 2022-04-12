@@ -125,6 +125,7 @@
     <Content Include="Formularios\frmDoctoresInsertar.aspx" />
     <Content Include="Formularios\frmClienteLista.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
+    <Content Include="Formularios\frmEspecialidadesMedicasLista.aspx" />
     <Content Include="Formularios\frmRegistroCitas.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -245,6 +246,13 @@
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.designer.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmEspecialidadesMedicasLista.aspx.cs">
+      <DependentUpon>frmEspecialidadesMedicasLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEspecialidadesMedicasLista.aspx.designer.cs">
+      <DependentUpon>frmEspecialidadesMedicasLista.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmRegistroCitas.aspx.cs">
       <DependentUpon>frmRegistroCitas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -318,7 +326,7 @@
     <Compile Include="Modelos\sp_ConsultarDoctoresPorCedula_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Modelos\sp_ConsultarEspecialidadPorIdONombre_Result.cs">
+    <Compile Include="Modelos\sp_ConsultarEspecialidadPorNombre_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\sp_ConsultarRegistroCitas_Result.cs">

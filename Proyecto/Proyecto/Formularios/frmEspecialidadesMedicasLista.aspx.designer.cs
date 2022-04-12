@@ -11,7 +11,7 @@ namespace Proyecto.Formularios
 {
 
 
-    public partial class frmClienteLista
+    public partial class frmEspecialidadesMedicasLista
     {
 
         /// <summary>
@@ -24,39 +24,30 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtCedula control.
+        /// txtNombre control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCedula;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// btnCargarDatos control.
+        /// btnCargarRegistros control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCargarDatos;
+        protected global::System.Web.UI.WebControls.Button btnCargarRegistros;
 
         /// <summary>
-        /// lblMensajeError control.
+        /// grdEspecialidadesMedicas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensajeError;
-
-        /// <summary>
-        /// grdClientes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdClientes;
+        protected global::System.Web.UI.WebControls.GridView grdEspecialidadesMedicas;
     }
 }
