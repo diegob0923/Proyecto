@@ -26,5 +26,16 @@ namespace Proyecto.BL
             }
             return true;
         }
+
+        public List<sp_ConsultarRegistroPorIdCliente_Result> ConsultarRegistroCitas(int idCliente = null)
+        {
+            List<sp_ConsultarRegistroPorIdCliente_Result> registroCitas = new List<ConsultarRegistroPorIdCliente_Result>();
+
+            registroCitas = modeloBD.sp_ConsultarRegistroPorIdCliente(idCliente).ToList();
+
+            return registroCitas;
+
+        }
+
     }
 }
