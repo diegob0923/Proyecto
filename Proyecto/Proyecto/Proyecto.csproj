@@ -124,9 +124,11 @@
     <Content Include="Formularios\frmClienteInsertar.aspx" />
     <Content Include="Formularios\frmDoctoresInsertar.aspx" />
     <Content Include="Formularios\frmClienteLista.aspx" />
+    <Content Include="Formularios\FrmDoctoresLista.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasLista.aspx" />
     <Content Include="Formularios\frmRegistroCitas.aspx" />
+    <Content Include="Formularios\FrmRegistroCitasLista.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -239,6 +241,13 @@
     <Compile Include="Formularios\frmClienteLista.aspx.designer.cs">
       <DependentUpon>frmClienteLista.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmDoctoresLista.aspx.cs">
+      <DependentUpon>FrmDoctoresLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmDoctoresLista.aspx.designer.cs">
+      <DependentUpon>FrmDoctoresLista.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -259,6 +268,13 @@
     </Compile>
     <Compile Include="Formularios\frmRegistroCitas.aspx.designer.cs">
       <DependentUpon>frmRegistroCitas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroCitasLista.aspx.cs">
+      <DependentUpon>FrmRegistroCitasLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroCitasLista.aspx.designer.cs">
+      <DependentUpon>FrmRegistroCitasLista.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
