@@ -29,9 +29,23 @@ namespace Proyecto.BL
 
         }
 
-        internal void InsertarDoctores(int v1, string text1, string text2, string text3, string text4, string text5, string text6, string text7, string text8, short v2, short v3, short v4, string text9, int v5, string text10)
+        public List<sp_ConsultarDoctoresPorCedula_Result> RetornarClientes(string cedula = null)
         {
-            throw new NotImplementedException();
+            List<sp_ConsultarDoctoresPorCedula_Result> resultado = new List<sp_ConsultarDoctoresPorCedula_Result>();
+
+            if (cedula.Equals(""))
+            {
+                resultado = modeloBD.sp_ConsultarDoctoresPorCedula(null).ToList();//traer todos los registros
+            }
+            else
+            {
+                resultado = modeloBD.sp_ConsultarDoctoresPorCedula(Convert.ToInt32(cedula)).ToList();
+            }
+
+
+
+
+            return resultado;
         }
     }
 }
