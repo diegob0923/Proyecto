@@ -27,15 +27,15 @@ namespace Proyecto.BL
             return true;
         }
 
-        public List<sp_ConsultarRegistroPorIdCliente_Result> ConsultarRegistroCitas(int idCliente = null)
-        {
-            List<sp_ConsultarRegistroPorIdCliente_Result> registroCitas = new List<ConsultarRegistroPorIdCliente_Result>();
-
-            registroCitas = modeloBD.sp_ConsultarRegistroPorIdCliente(idCliente).ToList();
+        public List<sp_ConsultarRegistroCitas_Result> RetornaCitaCliente (string idCliente= null) {
+            List<sp_ConsultarRegistroCitas_Result> registroCitas = new List<sp_ConsultarRegistroCitas_Result>();
+            registroCitas = modeloBD.sp_ConsultarRegistroCitas(Convert.ToInt32(idCliente)).ToList();
 
             return registroCitas;
 
-        }
+                }
+        
+            
 
     }
 }
