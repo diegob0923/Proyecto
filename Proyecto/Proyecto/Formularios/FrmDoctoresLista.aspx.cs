@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Proyecto.BL;
+using Proyecto.Modelos;
 
 namespace Proyecto.Formularios
 {
@@ -19,6 +21,8 @@ namespace Proyecto.Formularios
             cargarDatos();
         }
 
+
+       
         void cargarDatos()
         {
             BlDoctores oBlDoctores = new BlDoctores();
@@ -26,7 +30,7 @@ namespace Proyecto.Formularios
             try
             {
 
-                List<sp_ConsultarDoctoresPorCedula_Result> listaDoctores = new List<sp_ConsultarDcotoresPorCedula_Result>();
+                List<sp_ConsultarDoctoresPorCedula_Result> listaDoctores = new List<sp_ConsultarDoctoresPorCedula_Result>();
                 listaDoctores = oBlDoctores.RetornarDoctores(txtCedula.Text);
                 grdDoctores.DataSource = listaDoctores;
                 grdDoctores.DataBind();
