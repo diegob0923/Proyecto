@@ -29,7 +29,7 @@ namespace Proyecto.BL
 
         }
 
-        public List<sp_ConsultarDoctoresPorCedula_Result> RetornarClientes(string cedula = null)
+        public List<sp_ConsultarDoctoresPorCedula_Result> RetornarDoctores(string cedula = null)
         {
             List<sp_ConsultarDoctoresPorCedula_Result> resultado = new List<sp_ConsultarDoctoresPorCedula_Result>();
 
