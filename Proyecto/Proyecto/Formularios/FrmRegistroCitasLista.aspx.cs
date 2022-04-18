@@ -28,8 +28,8 @@ namespace Proyecto.Formularios
             try
             {
 
-                List<sp_ConsultarRegistroPorIdCliente_Result> listaRegistroCliente = new List<sp_ConsultarRegistroPorIdCliente_Result>();
-                listaRegistroCliente = oBLRegistroCitas.RetornarCitaCliente(txtIdCliente.Text);
+                List<sp_ConsultarRegistroCitas_Result> listaRegistroCliente = new List<sp_ConsultarRegistroCitas_Result>();
+                listaRegistroCliente = oBLRegistroCitas.RetornaCitaCliente(txtidCliente.Text);
                 grdRegistroCitas.DataSource = listaRegistroCliente;
                 grdRegistroCitas.DataBind();
 
@@ -38,6 +38,11 @@ namespace Proyecto.Formularios
             {
                 lblMensajeError.Text = "ocurrio un error al retornar los datos" + excepcion;
             }
+        }
+
+        protected void btnCargarRegistros_Click(object sender, EventArgs e)
+        {
+            cargarDatos();
         }
     }
 }
