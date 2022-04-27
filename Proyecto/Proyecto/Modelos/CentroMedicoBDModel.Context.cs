@@ -110,15 +110,6 @@ namespace Proyecto.Modelos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_BorrarDoctores", id_DoctorParameter);
         }
     
-        public virtual int sp_BorrarEspecialidadMedica(Nullable<int> id_especialidad)
-        {
-            var id_especialidadParameter = id_especialidad.HasValue ?
-                new ObjectParameter("id_especialidad", id_especialidad) :
-                new ObjectParameter("id_especialidad", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_BorrarEspecialidadMedica", id_especialidadParameter);
-        }
-    
         public virtual int sp_BorrarRegistroCita(Nullable<int> id_único)
         {
             var id_únicoParameter = id_único.HasValue ?
@@ -605,23 +596,6 @@ namespace Proyecto.Modelos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ModificaRegistroCitas", id_únicoParameter, id_doctorParameter, id_clienteParameter, fecha_citaParameter, hora_citaParameter, especialistaParameter, observacionesParameter, estado_citaParameter);
         }
     
-        public virtual int sp_ModificarEspecialidadMedica(Nullable<int> id_especialidad, string nombre, string descripcion)
-        {
-            var id_especialidadParameter = id_especialidad.HasValue ?
-                new ObjectParameter("id_especialidad", id_especialidad) :
-                new ObjectParameter("id_especialidad", typeof(int));
-    
-            var nombreParameter = nombre != null ?
-                new ObjectParameter("nombre", nombre) :
-                new ObjectParameter("nombre", typeof(string));
-    
-            var descripcionParameter = descripcion != null ?
-                new ObjectParameter("descripcion", descripcion) :
-                new ObjectParameter("descripcion", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ModificarEspecialidadMedica", id_especialidadParameter, nombreParameter, descripcionParameter);
-        }
-    
         public virtual ObjectResult<sp_padecimientos_paciente_Result> sp_padecimientos_paciente(string cedula)
         {
             var cedulaParameter = cedula != null ?
@@ -682,6 +656,50 @@ namespace Proyecto.Modelos
                 new ObjectParameter("cedula", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarClientePorCedula_Result>("sp_ConsultarClientePorCedula", cedulaParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarClienteId_Result> sp_ConsultarClienteId(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarClienteId_Result>("sp_ConsultarClienteId", idParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarEspecialidadId_Result> sp_ConsultarEspecialidadId(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarEspecialidadId_Result>("sp_ConsultarEspecialidadId", idParameter);
+        }
+    
+        public virtual int sp_BorrarEspecialidadMedica(Nullable<int> id_especialidad)
+        {
+            var id_especialidadParameter = id_especialidad.HasValue ?
+                new ObjectParameter("id_especialidad", id_especialidad) :
+                new ObjectParameter("id_especialidad", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_BorrarEspecialidadMedica", id_especialidadParameter);
+        }
+    
+        public virtual int sp_ModificarEspecialidadMedica(Nullable<int> id_especialidad, string nombre, string descripcion)
+        {
+            var id_especialidadParameter = id_especialidad.HasValue ?
+                new ObjectParameter("id_especialidad", id_especialidad) :
+                new ObjectParameter("id_especialidad", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ModificarEspecialidadMedica", id_especialidadParameter, nombreParameter, descripcionParameter);
         }
     }
 }

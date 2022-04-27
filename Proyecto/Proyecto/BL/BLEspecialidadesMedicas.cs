@@ -34,6 +34,41 @@ namespace Proyecto.BL
 
         }
 
+        public sp_ConsultarEspecialidadId_Result ConsultarEspecialidadMedicaId(int id)
+        {
+            sp_ConsultarEspecialidadId_Result registros = new sp_ConsultarEspecialidadId_Result();
+
+            registros = modeloBD.sp_ConsultarEspecialidadId(id).FirstOrDefault();
+
+            return registros;
+
+        }
+
+        public bool ModificarEspecialidadMedica(int idEspecialidad, string nombre, string desccripcion)
+        {
+            try
+            {
+                modeloBD.sp_ModificarEspecialidadMedica(idEspecialidad, nombre, desccripcion);
+            }
+            catch (Exception excepcion)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public bool EliminarEspecialidadMedica(int idEspecialidad)
+        {
+            try
+            {
+                modeloBD.sp_BorrarEspecialidadMedica(idEspecialidad);
+            }
+            catch (Exception excepcion)
+            {
+                return false;
+            }
+            return true;
+        }
 
     }
 }

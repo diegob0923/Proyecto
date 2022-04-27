@@ -121,12 +121,16 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Formularios\frmClienteEliminar.aspx" />
     <Content Include="Formularios\frmClienteInsertar.aspx" />
+    <Content Include="Formularios\frmClienteModificar.aspx" />
     <Content Include="Formularios\frmDoctoresInsertar.aspx" />
     <Content Include="Formularios\frmClienteLista.aspx" />
     <Content Include="Formularios\FrmDoctoresLista.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasLista.aspx" />
+    <Content Include="Formularios\frmEspecialidadesMedicasEliminar.aspx" />
+    <Content Include="Formularios\frmEspecialidadesMedicasModificar.aspx" />
     <Content Include="Formularios\frmRegistroCitas.aspx" />
     <Content Include="Formularios\FrmRegistroCitasLista.aspx" />
     <Content Include="Global.asax" />
@@ -221,12 +225,26 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmClienteEliminar.aspx.cs">
+      <DependentUpon>frmClienteEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmClienteEliminar.aspx.designer.cs">
+      <DependentUpon>frmClienteEliminar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmClienteInsertar.aspx.cs">
       <DependentUpon>frmClienteInsertar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Formularios\frmClienteInsertar.aspx.designer.cs">
       <DependentUpon>frmClienteInsertar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmClienteModificar.aspx.cs">
+      <DependentUpon>frmClienteModificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmClienteModificar.aspx.designer.cs">
+      <DependentUpon>frmClienteModificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmDoctoresInsertar.aspx.cs">
       <DependentUpon>frmDoctoresInsertar.aspx</DependentUpon>
@@ -262,6 +280,20 @@
     </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasLista.aspx.designer.cs">
       <DependentUpon>frmEspecialidadesMedicasLista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEspecialidadesMedicasEliminar.aspx.cs">
+      <DependentUpon>frmEspecialidadesMedicasEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEspecialidadesMedicasEliminar.aspx.designer.cs">
+      <DependentUpon>frmEspecialidadesMedicasEliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEspecialidadesMedicasModificar.aspx.cs">
+      <DependentUpon>frmEspecialidadesMedicasModificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEspecialidadesMedicasModificar.aspx.designer.cs">
+      <DependentUpon>frmEspecialidadesMedicasModificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmRegistroCitas.aspx.cs">
       <DependentUpon>frmRegistroCitas.aspx</DependentUpon>
@@ -337,10 +369,16 @@
     <Compile Include="Modelos\sp_citas_paciente_asistio_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\sp_ConsultarClienteId_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\sp_ConsultarClientePorCedula_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\sp_ConsultarDoctoresPorCedula_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\sp_ConsultarEspecialidadId_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\sp_ConsultarEspecialidadPorNombre_Result.cs">
