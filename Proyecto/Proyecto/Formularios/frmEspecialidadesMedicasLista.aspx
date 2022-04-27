@@ -15,6 +15,8 @@
             <asp:BoundField DataField="id_especialidad" HeaderText="Código" />
             <asp:BoundField DataField="nombre" HeaderText="Especialidad" />
             <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
+            <asp:HyperLinkField DataNavigateUrlFields="id_especialidad" DataNavigateUrlFormatString="frmEspecialidadesMedicasModificar.aspx?id_especialidad={0}" Text="Modificar" />
+            <asp:HyperLinkField DataNavigateUrlFields="id_especialidad" DataNavigateUrlFormatString="frmEspecialidadesMedicasEliminar.aspx?id_especialidad={0}" Text="Eliminar" />
         </Columns>
     </asp:GridView>
     <br />

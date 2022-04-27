@@ -28,6 +28,8 @@
             <asp:BoundField DataField="canton" HeaderText="Canton" />
             <asp:BoundField DataField="distrito" HeaderText="Distrito" />
             <asp:BoundField DataField="direccion" HeaderText="Dirección" />
+            <asp:HyperLinkField DataNavigateUrlFields="id_cliente" DataNavigateUrlFormatString="frmClienteModificar.aspx?id_cliente={0}" Text="Modificar" />
+            <asp:HyperLinkField DataNavigateUrlFields="id_cliente" DataNavigateUrlFormatString="frmClienteEliminar.aspx?id_cliente={0}" Text="Eliminar" />
         </Columns>
     </asp:GridView>
 <br />
