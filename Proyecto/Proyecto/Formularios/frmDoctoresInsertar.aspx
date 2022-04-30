@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <br />
-    <form id="form1" runat="server"><br />
+    
 &nbsp;<div>
             <asp:Label ID="Label1" runat="server" Text="Cédula"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -60,6 +60,12 @@
             <asp:RequiredFieldValidator ID="rfvCorreo" runat="server" ControlToValidate="txtCorreo" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
             <br />
+            <asp:Label ID="Label16" runat="server" Text="Carnet"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtCarnet" runat="server" TextMode="Number"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="rfvCarnet" runat="server" ControlToValidate="txtCarnet" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+            <br />
+            <br />
             <asp:Label ID="Label10" runat="server" Text="Provincia"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlProvincia" runat="server" AutoPostBack="True" DataTextField="nombre" DataValueField="id_Provincia" OnSelectedIndexChanged="ddlProvincia_SelectedIndexChanged">
@@ -89,14 +95,14 @@
             <br />
              <br />
         <asp:Label ID="Label14" runat="server" Text="Especialidad Médica"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtEspecialidades" runat="server" MaxLength="50"></asp:TextBox>
-            &nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtEspecialidad" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtEspecialidad" runat="server" MaxLength="50"></asp:TextBox>
+            &nbsp;&nbsp;<asp:RequiredFieldValidator ID="rfvEspecialidad" runat="server" ControlToValidate="txtEspecialidad" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <br />
             <br />
      <asp:Label ID="Label15" runat="server" Text="Hora Almuerzo"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="horaAlmuerzo" runat="server" MaxLength="50"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="txthoraAlmuerzo" runat="server" ControlToValidate="txthoraAlmuerzo" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtHoraAlmuerzo" runat="server" MaxLength="50"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="rfvHoraAlmuerzo" runat="server" ControlToValidate="txtHoraAlmuerzo" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;
             <br />
             <br />
@@ -104,6 +110,5 @@
             <br />
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
-        </div>
-    </form>
+        
 </asp:Content>

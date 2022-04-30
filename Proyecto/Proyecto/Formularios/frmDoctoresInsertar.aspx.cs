@@ -69,7 +69,7 @@ namespace Proyecto.Formularios
 
         }
 
-        protected void btnInsertar_Click()
+        protected void btnInsertar_Click(object sender, EventArgs e)
         {
             if (IsValid)
             {
@@ -78,9 +78,9 @@ namespace Proyecto.Formularios
                 try
                 {
                     oBlDoctores.InsertarDoctores(Convert.ToInt32(txtCedula.Text), txtGenero.Text, txtFechaNacimiento.Text, txtNombre.Text,
-                                                txtPrimerApellido.Text, txtSegundoApellido.Text, txtTelefono1.Text, txtTelefono2.Text, txtCorreo.Text,
+                                                txtPrimerApellido.Text, txtSegundoApellido.Text, txtTelefono1.Text, txtTelefono2.Text, txtCorreo.Text,Convert.ToInt32(txtCarnet.Text),
                                                 Convert.ToInt16(ddlProvincia.SelectedValue), Convert.ToInt16(ddlCanton.SelectedValue),
-                                                Convert.ToInt16(ddlDistrito.SelectedValue), txtDireccion.Text, Convert.ToInt32(txtEspecialidades.Text), txthoraAlmuerzo.Text);
+                                                Convert.ToInt16(ddlDistrito.SelectedValue), txtDireccion.Text, Convert.ToInt32(txtEspecialidad.Text), rfvHoraAlmuerzo.Text);
 
                     lblMensaje.Text = "Registro insertado correctamente";
                 }
@@ -91,5 +91,6 @@ namespace Proyecto.Formularios
 
             }
         }
+
     }
 }
