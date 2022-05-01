@@ -1,14 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="frmClienteInsertar.aspx.cs" Inherits="Proyecto.Formularios.frmClienteInsertar" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title>Doctores Insertar</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PaginaMaestra/PaginaMaestra.Master" AutoEventWireup="true" CodeBehind="frmClienteInsertar.aspx.cs" Inherits="Proyecto.Formularios.frmClienteInsertar" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+<div>
             <asp:Label ID="Label1" runat="server" Text="Cédula"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtCedula" runat="server" TextMode="Number"></asp:TextBox>
@@ -95,6 +90,4 @@
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
