@@ -8,13 +8,12 @@ using Proyecto.BL;
 
 namespace Proyecto.Formularios
 {
-    public partial class frmEspecialidadesMedicasInsert : System.Web.UI.Page
+    public partial class frmEspecialidadesMedicasInsertar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void btnInsertar_Click(object sender, EventArgs e)
         {
             InsertarNuevaEspecialidad();
@@ -35,7 +34,7 @@ namespace Proyecto.Formularios
                 {
                     lblMensaje.Text = "Ocurrió un error al insertar";
                 }
-               
+
             }
         }
     }

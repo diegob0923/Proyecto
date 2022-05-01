@@ -4,14 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Proyecto.Modelos;
 using Proyecto.BL;
-
+using Proyecto.Modelos;
 namespace Proyecto.Formularios
 {
     public partial class frmClienteInsertar : System.Web.UI.Page
     {
-
         CentroMedicoEntities modeloBD = new CentroMedicoEntities();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -29,7 +27,7 @@ namespace Proyecto.Formularios
         }
 
         void cargaProvincias()
-        { 
+        {
             List<RetornaProvincias_Result> listaProvincias = modeloBD.RetornaProvincias(null).ToList();
             ddlProvincia.DataSource = listaProvincias;
             ddlProvincia.DataBind();
@@ -77,10 +75,10 @@ namespace Proyecto.Formularios
 
                 try
                 {
-                    oBLCliente.InsertarClientes(Convert.ToInt32(txtCedula.Text),txtGenero.Text,txtFechaNacimiento.Text,txtNombre.Text,
-                                                txtPrimerApellido.Text,txtSegundoApellido.Text,txtTelefono1.Text, txtTelefono2.Text,txtCorreo.Text,
+                    oBLCliente.InsertarClientes(Convert.ToInt32(txtCedula.Text), txtGenero.Text, txtFechaNacimiento.Text, txtNombre.Text,
+                                                txtPrimerApellido.Text, txtSegundoApellido.Text, txtTelefono1.Text, txtTelefono2.Text, txtCorreo.Text,
                                                 Convert.ToInt16(ddlProvincia.SelectedValue), Convert.ToInt16(ddlCanton.SelectedValue),
-                                                Convert.ToInt16(ddlDistrito.SelectedValue),txtDireccion.Text);
+                                                Convert.ToInt16(ddlDistrito.SelectedValue), txtDireccion.Text);
 
                     lblMensaje.Text = "Registro insertado correctamente";
                 }
@@ -88,8 +86,11 @@ namespace Proyecto.Formularios
                 {
                     lblMensaje.Text = "Ocurrió un error al insertar";
                 }
-                
+
             }
         }
+
+
+
     }
 }
