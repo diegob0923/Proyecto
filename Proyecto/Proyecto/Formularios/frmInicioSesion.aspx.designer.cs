@@ -11,7 +11,7 @@ namespace Proyecto.Formularios
 {
 
 
-    public partial class frmClienteLista
+    public partial class frmInicioSesion
     {
 
         /// <summary>
@@ -24,66 +24,66 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// Label1 control.
+        /// txtUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtUsuario;
 
         /// <summary>
-        /// txtCedula control.
+        /// rfvUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCedula;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUsuario;
 
         /// <summary>
-        /// btnCargarDatos control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCargarDatos;
+        protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// hlNuevoCliente control.
+        /// txtContrasena control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlNuevoCliente;
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
 
         /// <summary>
-        /// lblMensajeError control.
+        /// rfvContrasena control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensajeError;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvContrasena;
 
         /// <summary>
-        /// grdClientes control.
+        /// btnIngresar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdClientes;
+        protected global::System.Web.UI.WebControls.Button btnIngresar;
 
         /// <summary>
-        /// hlRegresar control.
+        /// lblMensaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlRegresar;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
     }
 }

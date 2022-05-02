@@ -40,5 +40,14 @@ namespace Proyecto.Formularios
             }
         }
 
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmMenuColaboradores.aspx");
+        }
+
+        protected void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("frmClienteInsertar.aspx");
+        }
     }
 }

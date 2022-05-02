@@ -88,6 +88,9 @@
     <br />
     <asp:Button ID="btnModificar" runat="server" Text="Modificar" OnClick="btnModificar_Click" />
     
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="hlRegresar" runat="server" NavigateUrl="~/Formularios/frmClienteLista.aspx">Regresar</asp:HyperLink>
+    
     <br />
     <br />
     <asp:Label ID="lblMensaje" runat="server"></asp:Label>

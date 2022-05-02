@@ -139,6 +139,15 @@
           <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Usuarios_Sistema">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nombre_Completo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Contrasena" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Tipo_Usuario" Type="char" MaxLength="3" Nullable="false" />
+        </EntityType>
         <Association Name="Canton_ref_Provincia">
           <End Role="Provincia" Type="Self.Provincia" Multiplicity="1" />
           <End Role="Canton" Type="Self.Canton" Multiplicity="*" />
@@ -520,6 +529,10 @@
           <Parameter Name="owner_id" Type="int" Mode="In" />
           <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="sp_RetornaUsuarioValido" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id_Usuario" Type="varchar" Mode="In" />
+          <Parameter Name="Contrasena" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Canton" EntityType="Self.Canton" Schema="dbo" store:Type="Tables" />
@@ -533,6 +546,7 @@
           <EntitySet Name="Registro_citas" EntityType="Self.Registro_citas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tratamiento_Cliente" EntityType="Self.Tratamiento_Cliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tratamiento_Quirurgico" EntityType="Self.Tratamiento_Quirurgico" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios_Sistema" EntityType="Self.Usuarios_Sistema" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="Canton_ref_Provincia" Association="Self.Canton_ref_Provincia">
             <End Role="Provincia" EntitySet="Provincia" />
             <End Role="Canton" EntitySet="Canton" />
@@ -1219,12 +1233,17 @@
           <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_BorrarEspecialidadMedica">
-            <Parameter Name="id_especialidad" Mode="In" Type="Int32" />
+          <Parameter Name="id_especialidad" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ModificarEspecialidadMedica">
             <Parameter Name="id_especialidad" Mode="In" Type="Int32" />
             <Parameter Name="nombre" Mode="In" Type="String" />
             <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Usuarios_Sistema" EntityType="Model.Usuarios_Sistema" />
+          <FunctionImport Name="sp_RetornaUsuarioValido" ReturnType="Collection(Model.sp_RetornaUsuarioValido_Result)">
+            <Parameter Name="Id_Usuario" Mode="In" Type="String" />
+            <Parameter Name="Contrasena" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="RetornaCantones_Result">
@@ -1362,6 +1381,21 @@
           <Property Type="Int32" Name="id_especialidad" Nullable="false" />
           <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="Usuarios_Sistema">
+          <Key>
+            <PropertyRef Name="Id_Usuario" />
+          </Key>
+          <Property Name="Id_Usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre_Completo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Contrasena" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo_Usuario" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="sp_RetornaUsuarioValido_Result">
+          <Property Type="String" Name="Id_Usuario" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Nombre_Completo" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Tipo_Usuario" Nullable="false" MaxLength="3" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1726,6 +1760,26 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_BorrarEspecialidadMedica" FunctionName="Model.Store.sp_BorrarEspecialidadMedica" />
           <FunctionImportMapping FunctionImportName="sp_ModificarEspecialidadMedica" FunctionName="Model.Store.sp_ModificarEspecialidadMedica" />
+          <EntitySetMapping Name="Usuarios_Sistema">
+            <EntityTypeMapping TypeName="Model.Usuarios_Sistema">
+              <MappingFragment StoreEntitySet="Usuarios_Sistema">
+                <ScalarProperty Name="Tipo_Usuario" ColumnName="Tipo_Usuario" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="Nombre_Completo" ColumnName="Nombre_Completo" />
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_RetornaUsuarioValido" FunctionName="Model.Store.sp_RetornaUsuarioValido">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_RetornaUsuarioValido_Result">
+                <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+                <ScalarProperty Name="Nombre_Completo" ColumnName="Nombre_Completo" />
+                <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+                <ScalarProperty Name="Tipo_Usuario" ColumnName="Tipo_Usuario" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

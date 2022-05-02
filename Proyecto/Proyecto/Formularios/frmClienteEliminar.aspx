@@ -75,6 +75,9 @@
     <br />
     <asp:Button ID="btnEliminar" runat="server" OnClick="btnEliminar_Click" Text="Eliminar" />
     
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="hlRegresar" runat="server" NavigateUrl="~/Formularios/frmClienteLista.aspx">Regresar</asp:HyperLink>
+    
     <br />
     <br />
     <asp:Label ID="lblMensaje" runat="server"></asp:Label>

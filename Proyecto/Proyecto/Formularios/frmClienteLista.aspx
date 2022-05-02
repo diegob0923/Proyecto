@@ -3,11 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
+    <h3><asp:Label ID="Label2" runat="server" Text="Formulario Clientes"></asp:Label></h3>
     <asp:Label ID="Label1" runat="server" Text="Cédula"></asp:Label>
 &nbsp;&nbsp;&nbsp;
     <asp:TextBox ID="txtCedula" runat="server"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnCargarDatos" runat="server" Text="Cargar datos" OnClick="btnBuscar_Click" />
+&nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="hlNuevoCliente" runat="server" NavigateUrl="~/Formularios/frmClienteInsertar.aspx">Nuevo Cliente</asp:HyperLink>
 <br />
     <br />
     <asp:Label ID="lblMensajeError" runat="server"></asp:Label>
@@ -33,5 +36,6 @@
         </Columns>
     </asp:GridView>
 <br />
+    <asp:HyperLink ID="hlRegresar" runat="server" NavigateUrl="~/Formularios/frmMenuColaboradores.aspx">Regresar</asp:HyperLink>
 <br />
 </asp:Content>

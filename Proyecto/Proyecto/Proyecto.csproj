@@ -131,6 +131,9 @@
     <Content Include="Formularios\frmEspecialidadesMedicasLista.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasEliminar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasModificar.aspx" />
+    <Content Include="Formularios\frmInicioSesion.aspx" />
+    <Content Include="Formularios\frmMenuColaboradores.aspx" />
+    <Content Include="Formularios\frmMenuDoctores.aspx" />
     <Content Include="Formularios\frmRegistroCitas.aspx" />
     <Content Include="Formularios\FrmRegistroCitasLista.aspx" />
     <Content Include="Global.asax" />
@@ -151,6 +154,7 @@
       <DependentUpon>CentroMedicoBDModel.edmx</DependentUpon>
     </Content>
     <Content Include="PaginaMaestra\PaginaMaestra.Master" />
+    <Content Include="PaginaMaestra\PaginaInicioSesion.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Modelos\CentroMedicoBDModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -209,6 +213,7 @@
     <Compile Include="BL\BLCliente.cs" />
     <Compile Include="BL\BlDoctores.cs" />
     <Compile Include="BL\BLEspecialidadesMedicas.cs" />
+    <Compile Include="BL\BLInicioSesion.cs" />
     <Compile Include="BL\BLRegistroCitas.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -293,6 +298,27 @@
     </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasModificar.aspx.designer.cs">
       <DependentUpon>frmEspecialidadesMedicasModificar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmInicioSesion.aspx.cs">
+      <DependentUpon>frmInicioSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmInicioSesion.aspx.designer.cs">
+      <DependentUpon>frmInicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenuColaboradores.aspx.cs">
+      <DependentUpon>frmMenuColaboradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenuColaboradores.aspx.designer.cs">
+      <DependentUpon>frmMenuColaboradores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenuDoctores.aspx.cs">
+      <DependentUpon>frmMenuDoctores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenuDoctores.aspx.designer.cs">
+      <DependentUpon>frmMenuDoctores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmRegistroCitas.aspx.cs">
       <DependentUpon>frmRegistroCitas.aspx</DependentUpon>
@@ -395,11 +421,24 @@
     <Compile Include="Modelos\sp_padecimientos_paciente_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\sp_RetornaUsuarioValido_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\Tratamiento_Cliente.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\Tratamiento_Quirurgico.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\Usuarios_Sistema.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaMaestra\PaginaInicioSesion.Master.cs">
+      <DependentUpon>PaginaInicioSesion.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaMaestra\PaginaInicioSesion.Master.designer.cs">
+      <DependentUpon>PaginaInicioSesion.Master</DependentUpon>
     </Compile>
     <Compile Include="PaginaMaestra\PaginaMaestra.Master.cs">
       <DependentUpon>PaginaMaestra.Master</DependentUpon>

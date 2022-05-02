@@ -16,6 +16,8 @@
     <br />
     <br />
     <asp:Button ID="btnModificar" runat="server" OnClick="btnModificar_Click" Text="Modificar" />
+    &nbsp;&nbsp;&nbsp;
+    <asp:HyperLink ID="hlRegresar" runat="server" NavigateUrl="~/Formularios/frmEspecialidadesMedicasLista.aspx">Regresar</asp:HyperLink>
     <br />
     <br />
     <asp:Label ID="lblMensaje" runat="server"></asp:Label>

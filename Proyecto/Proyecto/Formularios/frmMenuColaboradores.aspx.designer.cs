@@ -11,17 +11,17 @@ namespace Proyecto.Formularios
 {
 
 
-    public partial class frmClienteLista
+    public partial class frmMenuColaboradores
     {
 
         /// <summary>
-        /// Label2 control.
+        /// lblBienvenida control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
+        protected global::System.Web.UI.WebControls.Label lblBienvenida;
 
         /// <summary>
         /// Label1 control.
@@ -33,57 +33,39 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// txtCedula control.
+        /// ddlMenuColaboradores control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCedula;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMenuColaboradores;
 
         /// <summary>
-        /// btnCargarDatos control.
+        /// ddlCatalogos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCargarDatos;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCatalogos;
 
         /// <summary>
-        /// hlNuevoCliente control.
+        /// btnSiguiente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlNuevoCliente;
+        protected global::System.Web.UI.WebControls.Button btnSiguiente;
 
         /// <summary>
-        /// lblMensajeError control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMensajeError;
-
-        /// <summary>
-        /// grdClientes control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdClientes;
-
-        /// <summary>
-        /// hlRegresar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlRegresar;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }
