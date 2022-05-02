@@ -32,6 +32,7 @@
         <AssociationConnector Association="Model.FK_Enfermedad_Cliente_Enfermedad" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Registro_citas_Especialidad_Medica" ManuallyRouted="false" />
         <AssociationConnector Association="Model.FK_Tratamiento_Cliente_Tratamiento_Quirurgico" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Model.Usuarios_Sistema" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

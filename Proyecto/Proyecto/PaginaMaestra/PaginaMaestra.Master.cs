@@ -11,7 +11,17 @@ namespace Proyecto.PaginaMaestra
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Convert.ToBoolean(Session["UsuarioLogueado"]) != true)
+            {
+                Response.Redirect("frmInicioSesion.aspx");
+            }
+        }
 
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Add("NombreUsuario", null);
+            Session.Add("UsuarioLogueado", null);
+            Response.Redirect("frmInicioSesion.aspx");
         }
     }
 }

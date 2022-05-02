@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestra.master.cs" Inherits="Proyecto.PaginaMaestra.PaginaMaestra" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaInicioSesion.master.cs" Inherits="Proyecto.PaginaMaestra.PaginaInicioSesion" %>
 
 <!DOCTYPE html> 
  
@@ -68,13 +68,9 @@
     </div> 
         <div class="center">  
         <div class="menu"> 
-           
-       
-            <asp:Button ID="btnCerrarSesion" runat="server" OnClick="btnCerrarSesion_Click" Text="Cerrar Sesión" />
-           
-       
-        </div> 
-        </div> 
+           <h2>Inicio Sesión</h2>
+              </div> 
+            </div> 
  
     <div style="text-align:left;"> 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> 

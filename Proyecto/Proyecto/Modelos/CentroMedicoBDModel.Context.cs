@@ -39,6 +39,7 @@ namespace Proyecto.Modelos
         public DbSet<Registro_citas> Registro_citas { get; set; }
         public DbSet<Tratamiento_Cliente> Tratamiento_Cliente { get; set; }
         public DbSet<Tratamiento_Quirurgico> Tratamiento_Quirurgico { get; set; }
+        public DbSet<Usuarios_Sistema> Usuarios_Sistema { get; set; }
     
         public virtual ObjectResult<RetornaCantones_Result> RetornaCantones(string nombre, Nullable<int> id_Provincia)
         {
@@ -700,6 +701,19 @@ namespace Proyecto.Modelos
                 new ObjectParameter("descripcion", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ModificarEspecialidadMedica", id_especialidadParameter, nombreParameter, descripcionParameter);
+        }
+    
+        public virtual ObjectResult<sp_RetornaUsuarioValido_Result> sp_RetornaUsuarioValido(string id_Usuario, string contrasena)
+        {
+            var id_UsuarioParameter = id_Usuario != null ?
+                new ObjectParameter("Id_Usuario", id_Usuario) :
+                new ObjectParameter("Id_Usuario", typeof(string));
+    
+            var contrasenaParameter = contrasena != null ?
+                new ObjectParameter("Contrasena", contrasena) :
+                new ObjectParameter("Contrasena", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RetornaUsuarioValido_Result>("sp_RetornaUsuarioValido", id_UsuarioParameter, contrasenaParameter);
         }
     }
 }
