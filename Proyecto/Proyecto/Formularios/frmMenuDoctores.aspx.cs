@@ -13,5 +13,28 @@ namespace Proyecto.Formularios
         {
             lblBienvenida.Text = "Bienvenid@ " + Session["NombreUsuario"].ToString() + " Ultima fecha ingreso";
         }
+
+        protected void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            switch (ddlMenuDoctores.SelectedValue)
+            {
+                case "Ver Citas":
+                    Response.Redirect("FrmRegistroCitasLista.aspx");    
+                    break;
+
+                case "Cancelar Citas":
+
+                    break;
+
+                case "Ver Expedientes":
+
+                    break;
+
+                case "Ver Reportes":
+
+                    break;
+
+            }
+        }
     }
 }
