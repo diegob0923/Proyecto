@@ -86,6 +86,9 @@
             <br />
             <br />
             <asp:Button ID="btnInsertar" runat="server" Text="Insertar" OnClick="btnInsertar_Click" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="hlRegresar" runat="server" NavigateUrl="~/Formularios/frmClienteLista.aspx">Regresar</asp:HyperLink>
+            <br />
             <br />
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>

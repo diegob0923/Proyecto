@@ -17,6 +17,8 @@
             <br />
             <br />
             <asp:Button ID="btnInsertar" runat="server" OnClick="btnInsertar_Click" Text="Insertar" />
+            &nbsp;&nbsp;&nbsp;
+            <asp:HyperLink ID="hlRegresar" runat="server" NavigateUrl="~/Formularios/frmEspecialidadesMedicasLista.aspx">Regresar</asp:HyperLink>
             <br />
             <br />
             <asp:Label ID="lblMensaje" runat="server"></asp:Label>

@@ -15,6 +15,15 @@ namespace Proyecto.Formularios
     {
 
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace Proyecto.Formularios
         protected global::System.Web.UI.WebControls.Button btnCargarRegistros;
 
         /// <summary>
+        /// hlNuevaEspecialidad control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlNuevaEspecialidad;
+
+        /// <summary>
         /// grdEspecialidadesMedicas control.
         /// </summary>
         /// <remarks>
@@ -49,5 +67,14 @@ namespace Proyecto.Formularios
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grdEspecialidadesMedicas;
+
+        /// <summary>
+        /// hlRegresar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlRegresar;
     }
 }
