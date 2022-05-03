@@ -8,26 +8,25 @@ using Proyecto.Modelos;
 using Proyecto.BL;
 namespace Proyecto.Formularios
 {
-    public partial class frmEspecialidadesMedicasLista : System.Web.UI.Page
+    public partial class frmEnfermedadesLista : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void btnCargarRegistros_Click(object sender, EventArgs e)
         {
             CargarRegistros();
         }
         void CargarRegistros()
         {
-            BLEspecialidadesMedicas oBLEspecialidadesMedicas = new BLEspecialidadesMedicas();
+            BLEnfermedad oBLEnfermedad = new BLEnfermedad();
 
-            List<sp_ConsultarEspecialidadPorNombre_Result> fuenteDatos = oBLEspecialidadesMedicas.ConsultarEspecialidadMedica(txtNombre.Text);
+            List<sp_ConsultarEnfermedades_Result> fuenteDatos = oBLEnfermedad.ConsultarEnfermedad(txtNombre.Text);
 
-            grdEspecialidadesMedicas.DataSource = fuenteDatos;
+            grdEnfermedad.DataSource = fuenteDatos;
 
-            grdEspecialidadesMedicas.DataBind();
+            grdEnfermedad.DataBind();
 
         }
     }

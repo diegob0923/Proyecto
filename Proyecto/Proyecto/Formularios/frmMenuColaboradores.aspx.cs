@@ -42,14 +42,7 @@ namespace Proyecto.Formularios
         {
             switch (ddlCatalogos.SelectedValue)
             {
-                /*
-                <asp:ListItem Value="Clientes">Clientes</asp:ListItem>
-                <asp:ListItem Value="Especialidades Medicas">Especialidades Médicas</asp:ListItem>
-                <asp:ListItem Value="Enfermedades">Enfermedades</asp:ListItem>
-                <asp:ListItem Value="Tratamientos Quirurgicos">Tratamientos Quirúrgicos</asp:ListItem>
-                <asp:ListItem Value="Doctores">Doctores</asp:ListItem>  
                 
-                 * */
 
                 case "Clientes":
                     Response.Redirect("frmClienteLista.aspx");
@@ -60,11 +53,11 @@ namespace Proyecto.Formularios
                     break;
 
                 case "Enfermedades":
-                    
+                    Response.Redirect("frmEnfermedadesLista.aspx");
                     break;
 
                 case "Tratamientos Quirurgicos":
-
+                    Response.Redirect("frmTratamientosQuirurgicosLista.aspx");
                     break;
 
                 case "Doctores":

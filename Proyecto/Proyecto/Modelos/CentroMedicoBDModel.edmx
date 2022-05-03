@@ -366,11 +366,17 @@
         <Function Name="sp_BorrarDoctores" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_Doctor" Type="int" Mode="In" />
         </Function>
+        <Function Name="sp_BorrarEnfermedades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_BorrarEspecialidadMedica" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_especialidad" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_BorrarRegistroCita" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_único" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_BorrarTratamientosQuirurgicos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_citas_paciente_asistio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="varchar" Mode="In" />
@@ -384,6 +390,13 @@
         <Function Name="sp_ConsultarDoctoresPorCedula" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="cedula" Type="int" Mode="In" />
         </Function>
+        <Function Name="sp_ConsultarEnfermedades" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ConsultarEnfermedadesID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
         <Function Name="sp_ConsultarEspecialidadId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
         </Function>
@@ -392,6 +405,13 @@
         </Function>
         <Function Name="sp_ConsultarRegistroCitas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_único" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_ConsultarTratamientosQuirurgicos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ConsultarTratamientosQuirurgicosID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -452,6 +472,10 @@
           <Parameter Name="especialidad_medica" Type="int" Mode="In" />
           <Parameter Name="hora_almuerzo" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="sp_InsertarEnfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_InsertarEspecialidadMedica" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="nombre" Type="varchar" Mode="In" />
           <Parameter Name="descripcion" Type="varchar" Mode="In" />
@@ -464,6 +488,10 @@
           <Parameter Name="especialista" Type="int" Mode="In" />
           <Parameter Name="observaciones" Type="varchar" Mode="In" />
           <Parameter Name="estado_cita" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_InsertarTratamientoQuirurgico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
         </Function>
         <Function Name="sp_ModificaCanton" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_Canton" Type="int" Mode="In" />
@@ -516,8 +544,18 @@
           <Parameter Name="observaciones" Type="varchar" Mode="In" />
           <Parameter Name="estado_cita" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="sp_ModificarEnfermedad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="sp_ModificarEspecialidadMedica" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_especialidad" Type="int" Mode="In" />
+          <Parameter Name="nombre" Type="varchar" Mode="In" />
+          <Parameter Name="descripcion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_ModificarTratamientoQuirurgico" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="nombre" Type="varchar" Mode="In" />
           <Parameter Name="descripcion" Type="varchar" Mode="In" />
         </Function>
@@ -1245,6 +1283,44 @@
             <Parameter Name="Id_Usuario" Mode="In" Type="String" />
             <Parameter Name="Contrasena" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="sp_BorrarEnfermedades">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_BorrarTratamientosQuirurgicos">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ConsultarEnfermedades" ReturnType="Collection(Model.sp_ConsultarEnfermedades_Result)">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ConsultarEnfermedadesID" ReturnType="Collection(Model.sp_ConsultarEnfermedadesID_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ConsultarTratamientosQuirurgicos" ReturnType="Collection(Model.sp_ConsultarTratamientosQuirurgicos_Result)">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ConsultarTratamientosQuirurgicosID" ReturnType="Collection(Model.sp_ConsultarTratamientosQuirurgicosID_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertarEnfermedad">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_InsertarTratamientoQuirurgico">
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ModificarEnfermedad">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_ModificarTratamientoQuirurgico">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="nombre" Mode="In" Type="String" />
+            <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="RetornaCantones_Result">
           <Property Type="Int32" Name="id_Canton" Nullable="false" />
@@ -1396,6 +1472,26 @@
           <Property Type="String" Name="Nombre_Completo" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Contrasena" Nullable="false" MaxLength="100" />
           <Property Type="String" Name="Tipo_Usuario" Nullable="false" MaxLength="3" />
+        </ComplexType>
+        <ComplexType Name="sp_ConsultarEnfermedades_Result">
+          <Property Type="Int32" Name="id_enfermedad" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_ConsultarEnfermedadesID_Result">
+          <Property Type="Int32" Name="id_enfermedad" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_ConsultarTratamientosQuirurgicos_Result">
+          <Property Type="Int32" Name="id_tratamiento" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="sp_ConsultarTratamientosQuirurgicosID_Result">
+          <Property Type="Int32" Name="id_tratamiento" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1780,6 +1876,48 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_BorrarEnfermedades" FunctionName="Model.Store.sp_BorrarEnfermedades" />
+          <FunctionImportMapping FunctionImportName="sp_BorrarTratamientosQuirurgicos" FunctionName="Model.Store.sp_BorrarTratamientosQuirurgicos" />
+          <FunctionImportMapping FunctionImportName="sp_ConsultarEnfermedades" FunctionName="Model.Store.sp_ConsultarEnfermedades">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_ConsultarEnfermedades_Result">
+                <ScalarProperty Name="id_enfermedad" ColumnName="id_enfermedad" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ConsultarEnfermedadesID" FunctionName="Model.Store.sp_ConsultarEnfermedadesID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_ConsultarEnfermedadesID_Result">
+                <ScalarProperty Name="id_enfermedad" ColumnName="id_enfermedad" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ConsultarTratamientosQuirurgicos" FunctionName="Model.Store.sp_ConsultarTratamientosQuirurgicos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_ConsultarTratamientosQuirurgicos_Result">
+                <ScalarProperty Name="id_tratamiento" ColumnName="id_tratamiento" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_ConsultarTratamientosQuirurgicosID" FunctionName="Model.Store.sp_ConsultarTratamientosQuirurgicosID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_ConsultarTratamientosQuirurgicosID_Result">
+                <ScalarProperty Name="id_tratamiento" ColumnName="id_tratamiento" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_InsertarEnfermedad" FunctionName="Model.Store.sp_InsertarEnfermedad" />
+          <FunctionImportMapping FunctionImportName="sp_InsertarTratamientoQuirurgico" FunctionName="Model.Store.sp_InsertarTratamientoQuirurgico" />
+          <FunctionImportMapping FunctionImportName="sp_ModificarEnfermedad" FunctionName="Model.Store.sp_ModificarEnfermedad" />
+          <FunctionImportMapping FunctionImportName="sp_ModificarTratamientoQuirurgico" FunctionName="Model.Store.sp_ModificarTratamientoQuirurgico" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

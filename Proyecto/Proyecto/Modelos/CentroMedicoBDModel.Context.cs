@@ -715,5 +715,127 @@ namespace Proyecto.Modelos
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_RetornaUsuarioValido_Result>("sp_RetornaUsuarioValido", id_UsuarioParameter, contrasenaParameter);
         }
+    
+        public virtual int sp_BorrarEnfermedades(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_BorrarEnfermedades", idParameter);
+        }
+    
+        public virtual int sp_BorrarTratamientosQuirurgicos(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_BorrarTratamientosQuirurgicos", idParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarEnfermedades_Result> sp_ConsultarEnfermedades(string nombre, string descripcion)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarEnfermedades_Result>("sp_ConsultarEnfermedades", nombreParameter, descripcionParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarEnfermedadesID_Result> sp_ConsultarEnfermedadesID(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarEnfermedadesID_Result>("sp_ConsultarEnfermedadesID", idParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarTratamientosQuirurgicos_Result> sp_ConsultarTratamientosQuirurgicos(string nombre, string descripcion)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarTratamientosQuirurgicos_Result>("sp_ConsultarTratamientosQuirurgicos", nombreParameter, descripcionParameter);
+        }
+    
+        public virtual ObjectResult<sp_ConsultarTratamientosQuirurgicosID_Result> sp_ConsultarTratamientosQuirurgicosID(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_ConsultarTratamientosQuirurgicosID_Result>("sp_ConsultarTratamientosQuirurgicosID", idParameter);
+        }
+    
+        public virtual int sp_InsertarEnfermedad(string nombre, string descripcion)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertarEnfermedad", nombreParameter, descripcionParameter);
+        }
+    
+        public virtual int sp_InsertarTratamientoQuirurgico(string nombre, string descripcion)
+        {
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_InsertarTratamientoQuirurgico", nombreParameter, descripcionParameter);
+        }
+    
+        public virtual int sp_ModificarEnfermedad(Nullable<int> id, string nombre, string descripcion)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ModificarEnfermedad", idParameter, nombreParameter, descripcionParameter);
+        }
+    
+        public virtual int sp_ModificarTratamientoQuirurgico(Nullable<int> id, string nombre, string descripcion)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var nombreParameter = nombre != null ?
+                new ObjectParameter("nombre", nombre) :
+                new ObjectParameter("nombre", typeof(string));
+    
+            var descripcionParameter = descripcion != null ?
+                new ObjectParameter("descripcion", descripcion) :
+                new ObjectParameter("descripcion", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ModificarTratamientoQuirurgico", idParameter, nombreParameter, descripcionParameter);
+        }
     }
 }
