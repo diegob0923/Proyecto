@@ -127,6 +127,7 @@
     <Content Include="Formularios\frmDoctoresInsertar.aspx" />
     <Content Include="Formularios\frmClienteLista.aspx" />
     <Content Include="Formularios\FrmDoctoresLista.aspx" />
+    <Content Include="Formularios\frmDoctoresModificar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasLista.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasEliminar.aspx" />
@@ -270,6 +271,13 @@
     </Compile>
     <Compile Include="Formularios\FrmDoctoresLista.aspx.designer.cs">
       <DependentUpon>FrmDoctoresLista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmDoctoresModificar.aspx.cs">
+      <DependentUpon>frmDoctoresModificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmDoctoresModificar.aspx.designer.cs">
+      <DependentUpon>frmDoctoresModificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
