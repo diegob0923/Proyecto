@@ -6,9 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Proyecto.Modelos;
 using Proyecto.BL;
+
 namespace Proyecto.Formularios
 {
-    public partial class frmEspecialidadesMedicasLista : System.Web.UI.Page
+    public partial class frmTratamientosQuirurgicosLista : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,15 +20,16 @@ namespace Proyecto.Formularios
         {
             CargarRegistros();
         }
+
         void CargarRegistros()
         {
-            BLEspecialidadesMedicas oBLEspecialidadesMedicas = new BLEspecialidadesMedicas();
+            BLTratamientosQuirurgicos oBLTratamientosQuirurgicos = new BLTratamientosQuirurgicos();
 
-            List<sp_ConsultarEspecialidadPorNombre_Result> fuenteDatos = oBLEspecialidadesMedicas.ConsultarEspecialidadMedica(txtNombre.Text);
+            List<sp_ConsultarTratamientosQuirurgicos_Result> fuenteDatos = oBLTratamientosQuirurgicos.ConsultarTratamientosQuirurgicos(txtNombre.Text);
 
-            grdEspecialidadesMedicas.DataSource = fuenteDatos;
+            grdTratamientosQuirurgicos.DataSource = fuenteDatos;
 
-            grdEspecialidadesMedicas.DataBind();
+            grdTratamientosQuirurgicos.DataBind();
 
         }
     }

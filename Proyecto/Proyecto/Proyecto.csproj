@@ -128,6 +128,10 @@
     <Content Include="Formularios\frmClienteLista.aspx" />
     <Content Include="Formularios\FrmDoctoresLista.aspx" />
     <Content Include="Formularios\frmDoctoresModificar.aspx" />
+    <Content Include="Formularios\frmEnfermedadesEliminar.aspx" />
+    <Content Include="Formularios\frmEnfermedadesInsertar.aspx" />
+    <Content Include="Formularios\frmEnfermedadesLista.aspx" />
+    <Content Include="Formularios\frmEnfermedadesModificar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasInsertar.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasLista.aspx" />
     <Content Include="Formularios\frmEspecialidadesMedicasEliminar.aspx" />
@@ -137,6 +141,10 @@
     <Content Include="Formularios\frmMenuDoctores.aspx" />
     <Content Include="Formularios\frmRegistroCitas.aspx" />
     <Content Include="Formularios\FrmRegistroCitasLista.aspx" />
+    <Content Include="Formularios\frmTratamientosQuirurgicosEliminar.aspx" />
+    <Content Include="Formularios\frmTratamientosQuirurgicosInsertar.aspx" />
+    <Content Include="Formularios\frmTratamientosQuirurgicosLista.aspx" />
+    <Content Include="Formularios\frmTratamientosQuirurgicosModificar.aspx" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -213,9 +221,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BL\BLCliente.cs" />
     <Compile Include="BL\BlDoctores.cs" />
+    <Compile Include="BL\BLEnfermedad.cs" />
     <Compile Include="BL\BLEspecialidadesMedicas.cs" />
     <Compile Include="BL\BLInicioSesion.cs" />
     <Compile Include="BL\BLRegistroCitas.cs" />
+    <Compile Include="BL\BLTratamientosQuirurgicos.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,13 +281,6 @@
     </Compile>
     <Compile Include="Formularios\FrmDoctoresLista.aspx.designer.cs">
       <DependentUpon>FrmDoctoresLista.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmDoctoresModificar.aspx.cs">
-      <DependentUpon>frmDoctoresModificar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmDoctoresModificar.aspx.designer.cs">
-      <DependentUpon>frmDoctoresModificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmEspecialidadesMedicasInsertar.aspx.cs">
       <DependentUpon>frmEspecialidadesMedicasInsertar.aspx</DependentUpon>
@@ -341,6 +344,34 @@
     </Compile>
     <Compile Include="Formularios\FrmRegistroCitasLista.aspx.designer.cs">
       <DependentUpon>FrmRegistroCitasLista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosEliminar.aspx.cs">
+      <DependentUpon>frmTratamientosQuirurgicosEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosEliminar.aspx.designer.cs">
+      <DependentUpon>frmTratamientosQuirurgicosEliminar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosInsertar.aspx.cs">
+      <DependentUpon>frmTratamientosQuirurgicosInsertar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosInsertar.aspx.designer.cs">
+      <DependentUpon>frmTratamientosQuirurgicosInsertar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosLista.aspx.cs">
+      <DependentUpon>frmTratamientosQuirurgicosLista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosLista.aspx.designer.cs">
+      <DependentUpon>frmTratamientosQuirurgicosLista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosModificar.aspx.cs">
+      <DependentUpon>frmTratamientosQuirurgicosModificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTratamientosQuirurgicosModificar.aspx.designer.cs">
+      <DependentUpon>frmTratamientosQuirurgicosModificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -411,6 +442,12 @@
     <Compile Include="Modelos\sp_ConsultarDoctoresPorCedula_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelos\sp_ConsultarEnfermedadesID_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\sp_ConsultarEnfermedades_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\sp_ConsultarEspecialidadId_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
@@ -418,6 +455,12 @@
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\sp_ConsultarRegistroCitas_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\sp_ConsultarTratamientosQuirurgicosID_Result.cs">
+      <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\sp_ConsultarTratamientosQuirurgicos_Result.cs">
       <DependentUpon>CentroMedicoBDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelos\sp_helpdiagramdefinition_Result.cs">
