@@ -140,7 +140,9 @@
     <Content Include="Formularios\frmMenuColaboradores.aspx" />
     <Content Include="Formularios\frmMenuDoctores.aspx" />
     <Content Include="Formularios\frmRegistroCitas.aspx" />
+    <Content Include="Formularios\FrmRegistroCitasEliminar.aspx" />
     <Content Include="Formularios\FrmRegistroCitasLista.aspx" />
+    <Content Include="Formularios\FrmRegistroCitasModificar.aspx" />
     <Content Include="Formularios\frmTratamientosQuirurgicosEliminar.aspx" />
     <Content Include="Formularios\frmTratamientosQuirurgicosInsertar.aspx" />
     <Content Include="Formularios\frmTratamientosQuirurgicosLista.aspx" />
@@ -338,12 +340,26 @@
     <Compile Include="Formularios\frmRegistroCitas.aspx.designer.cs">
       <DependentUpon>frmRegistroCitas.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmRegistroCitasEliminar.aspx.cs">
+      <DependentUpon>FrmRegistroCitasEliminar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroCitasEliminar.aspx.designer.cs">
+      <DependentUpon>FrmRegistroCitasEliminar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmRegistroCitasLista.aspx.cs">
       <DependentUpon>FrmRegistroCitasLista.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Formularios\FrmRegistroCitasLista.aspx.designer.cs">
       <DependentUpon>FrmRegistroCitasLista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroCitasModificar.aspx.cs">
+      <DependentUpon>FrmRegistroCitasModificar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRegistroCitasModificar.aspx.designer.cs">
+      <DependentUpon>FrmRegistroCitasModificar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmTratamientosQuirurgicosEliminar.aspx.cs">
       <DependentUpon>frmTratamientosQuirurgicosEliminar.aspx</DependentUpon>
