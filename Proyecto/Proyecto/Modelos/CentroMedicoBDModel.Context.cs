@@ -40,7 +40,12 @@ namespace Proyecto.Modelos
         public DbSet<Tratamiento_Cliente> Tratamiento_Cliente { get; set; }
         public DbSet<Tratamiento_Quirurgico> Tratamiento_Quirurgico { get; set; }
         public DbSet<Usuarios_Sistema> Usuarios_Sistema { get; set; }
-    
+
+        internal void sp_ModificaRegistroCitas(int idDoctor, int idCliente, string fechaCita, string horaCita, int especialidad, string observaciones, string estadoCita)
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual ObjectResult<RetornaCantones_Result> RetornaCantones(string nombre, Nullable<int> id_Provincia)
         {
             var nombreParameter = nombre != null ?
