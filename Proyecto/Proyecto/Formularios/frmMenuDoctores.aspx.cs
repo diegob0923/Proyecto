@@ -11,7 +11,7 @@ namespace Proyecto.Formularios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblBienvenida.Text = "Bienvenid@ " + Session["NombreUsuario"].ToString() + " Ultima fecha ingreso";
+            lblBienvenida.Text = "Bienvenid@ " + Session["NombreUsuario"].ToString();
         }
 
         protected void btnSiguiente_Click(object sender, EventArgs e)
@@ -23,15 +23,11 @@ namespace Proyecto.Formularios
                     break;
 
                 case "Cancelar Citas":
-
-                    break;
-
-                case "Ver Expedientes":
-
+                    Response.Redirect("FrmRegistroCitasEliminar");
                     break;
 
                 case "Ver Reportes":
-
+                    Response.Redirect("frmrReporteExpediente.aspx");
                     break;
 
             }

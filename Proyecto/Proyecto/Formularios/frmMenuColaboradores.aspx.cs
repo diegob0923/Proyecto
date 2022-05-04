@@ -24,7 +24,7 @@ namespace Proyecto.Formularios
                     break;
 
                 case "Cancelar Citas":
-
+                    Response.Redirect("FrmRegistroCitasEliminar");
                     break;
 
                 case "Modificar datos paciente":
@@ -32,7 +32,7 @@ namespace Proyecto.Formularios
                     break;
 
                 case "Ver Reportes":
-
+                    Response.Redirect("frmrReporteExpediente.aspx");
                     break;
 
             }
