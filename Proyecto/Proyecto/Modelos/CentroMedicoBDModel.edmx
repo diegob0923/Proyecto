@@ -340,6 +340,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="GenerarReporteExpediente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="cedula" Type="int" Mode="In" />
+        </Function>
         <Function Name="RetornaCantones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="nombre" Type="varchar" Mode="In" />
           <Parameter Name="id_Provincia" Type="int" Mode="In" />
@@ -1284,24 +1287,24 @@
             <Parameter Name="Contrasena" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_BorrarEnfermedades">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_BorrarTratamientosQuirurgicos">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ConsultarEnfermedades" ReturnType="Collection(Model.sp_ConsultarEnfermedades_Result)">
             <Parameter Name="nombre" Mode="In" Type="String" />
             <Parameter Name="descripcion" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_ConsultarEnfermedadesID" ReturnType="Collection(Model.sp_ConsultarEnfermedadesID_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_ConsultarTratamientosQuirurgicos" ReturnType="Collection(Model.sp_ConsultarTratamientosQuirurgicos_Result)">
             <Parameter Name="nombre" Mode="In" Type="String" />
             <Parameter Name="descripcion" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_ConsultarTratamientosQuirurgicosID" ReturnType="Collection(Model.sp_ConsultarTratamientosQuirurgicosID_Result)">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_InsertarEnfermedad">
             <Parameter Name="nombre" Mode="In" Type="String" />
@@ -1320,6 +1323,9 @@
             <Parameter Name="id" Mode="In" Type="Int32" />
             <Parameter Name="nombre" Mode="In" Type="String" />
             <Parameter Name="descripcion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GenerarReporteExpediente" ReturnType="Collection(Model.GenerarReporteExpediente_Result)">
+            <Parameter Name="cedula" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="RetornaCantones_Result">
@@ -1492,6 +1498,19 @@
           <Property Type="Int32" Name="id_tratamiento" Nullable="false" />
           <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
           <Property Type="String" Name="descripcion" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GenerarReporteExpediente_Result">
+          <Property Type="Int32" Name="id_cliente" Nullable="false" />
+          <Property Type="Int32" Name="cedula" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="primer_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="segundo_apellido" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="enfermedad" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="tratamiento" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="id_único" Nullable="false" />
+          <Property Type="DateTime" Name="fecha_cita" Nullable="false" />
+          <Property Type="Int32" Name="hora_cita" Nullable="false" />
+          <Property Type="String" Name="estado_cita" Nullable="false" MaxLength="50" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1918,6 +1937,23 @@
           <FunctionImportMapping FunctionImportName="sp_InsertarTratamientoQuirurgico" FunctionName="Model.Store.sp_InsertarTratamientoQuirurgico" />
           <FunctionImportMapping FunctionImportName="sp_ModificarEnfermedad" FunctionName="Model.Store.sp_ModificarEnfermedad" />
           <FunctionImportMapping FunctionImportName="sp_ModificarTratamientoQuirurgico" FunctionName="Model.Store.sp_ModificarTratamientoQuirurgico" />
+          <FunctionImportMapping FunctionImportName="GenerarReporteExpediente" FunctionName="Model.Store.GenerarReporteExpediente">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.GenerarReporteExpediente_Result">
+                <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="primer_apellido" ColumnName="primer_apellido" />
+                <ScalarProperty Name="segundo_apellido" ColumnName="segundo_apellido" />
+                <ScalarProperty Name="enfermedad" ColumnName="enfermedad" />
+                <ScalarProperty Name="tratamiento" ColumnName="tratamiento" />
+                <ScalarProperty Name="id_único" ColumnName="id_único" />
+                <ScalarProperty Name="fecha_cita" ColumnName="fecha_cita" />
+                <ScalarProperty Name="hora_cita" ColumnName="hora_cita" />
+                <ScalarProperty Name="estado_cita" ColumnName="estado_cita" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

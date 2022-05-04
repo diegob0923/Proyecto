@@ -842,5 +842,14 @@ namespace Proyecto.Modelos
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_ModificarTratamientoQuirurgico", idParameter, nombreParameter, descripcionParameter);
         }
+    
+        public virtual ObjectResult<GenerarReporteExpediente_Result> GenerarReporteExpediente(Nullable<int> cedula)
+        {
+            var cedulaParameter = cedula.HasValue ?
+                new ObjectParameter("cedula", cedula) :
+                new ObjectParameter("cedula", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GenerarReporteExpediente_Result>("GenerarReporteExpediente", cedulaParameter);
+        }
     }
 }
